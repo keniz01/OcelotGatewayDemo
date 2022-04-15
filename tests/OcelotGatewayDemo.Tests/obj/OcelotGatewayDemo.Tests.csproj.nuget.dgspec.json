@@ -1,0 +1,137 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/keniz01/Development/OcelotGatewayDemo/tests/OcelotGatewayDemo.Tests/OcelotGatewayDemo.Tests.csproj": {}
+  },
+  "projects": {
+    "/Users/keniz01/Development/OcelotGatewayDemo/src/OcelotGatewayDemo.Api.Cache/OcelotGatewayDemo.Api.Cache.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/keniz01/Development/OcelotGatewayDemo/src/OcelotGatewayDemo.Api.Cache/OcelotGatewayDemo.Api.Cache.csproj",
+        "projectName": "OcelotGatewayDemo.Api.Cache",
+        "projectPath": "/Users/keniz01/Development/OcelotGatewayDemo/src/OcelotGatewayDemo.Api.Cache/OcelotGatewayDemo.Api.Cache.csproj",
+        "packagesPath": "/Users/keniz01/.nuget/packages/",
+        "outputPath": "/Users/keniz01/Development/OcelotGatewayDemo/src/OcelotGatewayDemo.Api.Cache/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/keniz01/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.100-preview.1.22110.4/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/keniz01/Development/OcelotGatewayDemo/tests/OcelotGatewayDemo.Tests/OcelotGatewayDemo.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/keniz01/Development/OcelotGatewayDemo/tests/OcelotGatewayDemo.Tests/OcelotGatewayDemo.Tests.csproj",
+        "projectName": "OcelotGatewayDemo.Tests",
+        "projectPath": "/Users/keniz01/Development/OcelotGatewayDemo/tests/OcelotGatewayDemo.Tests/OcelotGatewayDemo.Tests.csproj",
+        "packagesPath": "/Users/keniz01/.nuget/packages/",
+        "outputPath": "/Users/keniz01/Development/OcelotGatewayDemo/tests/OcelotGatewayDemo.Tests/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/keniz01/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/keniz01/Development/OcelotGatewayDemo/src/OcelotGatewayDemo.Api.Cache/OcelotGatewayDemo.Api.Cache.csproj": {
+                "projectPath": "/Users/keniz01/Development/OcelotGatewayDemo/src/OcelotGatewayDemo.Api.Cache/OcelotGatewayDemo.Api.Cache.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.0.0, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.13.2, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.100-preview.1.22110.4/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
