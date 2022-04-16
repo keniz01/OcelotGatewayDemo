@@ -36,6 +36,62 @@
                 "${workspaceFolder}/OcelotGatewayDemo.Api.Gateway/OcelotGatewayDemo.Api.Gateway.csproj"
             ],
             "problemMatcher": "$msCompile"
+        },
+        {
+            "type": "docker-build",
+            "label": "docker-build: debug",
+            "dependsOn": [
+                "build"
+            ],
+            "dockerBuild": {
+                "tag": "ocelotgatewaydemo:dev",
+                "target": "base",
+                "dockerfile": "${workspaceFolder}/src/OcelotGatewayDemo.Api.Cache/Dockerfile",
+                "context": "${workspaceFolder}",
+                "pull": true
+            },
+            "netCore": {
+                "appProject": "${workspaceFolder}/src/OcelotGatewayDemo.Api.Cache/OcelotGatewayDemo.Api.Cache.csproj"
+            }
+        },
+        {
+            "type": "docker-build",
+            "label": "docker-build: release",
+            "dependsOn": [
+                "build"
+            ],
+            "dockerBuild": {
+                "tag": "ocelotgatewaydemo:latest",
+                "dockerfile": "${workspaceFolder}/src/OcelotGatewayDemo.Api.Cache/Dockerfile",
+                "context": "${workspaceFolder}",
+                "pull": true
+            },
+            "netCore": {
+                "appProject": "${workspaceFolder}/src/OcelotGatewayDemo.Api.Cache/OcelotGatewayDemo.Api.Cache.csproj"
+            }
+        },
+        {
+            "type": "docker-run",
+            "label": "docker-run: debug",
+            "dependsOn": [
+                "docker-build: debug"
+            ],
+            "dockerRun": {},
+            "netCore": {
+                "appProject": "${workspaceFolder}/src/OcelotGatewayDemo.Api.Cache/OcelotGatewayDemo.Api.Cache.csproj",
+                "enableDebugging": true
+            }
+        },
+        {
+            "type": "docker-run",
+            "label": "docker-run: release",
+            "dependsOn": [
+                "docker-build: release"
+            ],
+            "dockerRun": {},
+            "netCore": {
+                "appProject": "${workspaceFolder}/src/OcelotGatewayDemo.Api.Cache/OcelotGatewayDemo.Api.Cache.csproj"
+            }
         }
     ]
 }

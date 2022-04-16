@@ -1,0 +1,27 @@
+# Please refer https://aka.ms/HTTPSinContainer on how to setup an https developer certificate for your ASP .NET Core service.
+
+version: '3.4'
+
+services:
+  apigateway:
+    image: apigateway
+    build:
+      context: .
+      dockerfile: src/OcelotGatewayDemo.Api.Gateway/Dockerfile
+    ports:
+      - 5000:5000
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    volumes:
+      - ~/.vsdbg:/remote_debugger:rw
+  cacheapi:
+    image: cacheapi
+    build:
+      context: .
+      dockerfile: src/OcelotGatewayDemo.Api.Cache/Dockerfile
+    ports:
+      - 6000:6000
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    volumes:
+      - ~/.vsdbg:/remote_debugger:rw      

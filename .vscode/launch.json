@@ -6,11 +6,10 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/OcelotGatewayDemo.Api.Cache/bin/Debug/net7.0/OcelotGatewayDemo.Api.Cache.dll",
+            "program": "${workspaceFolder}/src/OcelotGatewayDemo.Api.Cache/bin/Debug/net7.0/OcelotGatewayDemo.Api.Cache.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/OcelotGatewayDemo.Api.Cache",
+            "cwd": "${workspaceFolder}/src/OcelotGatewayDemo.Api.Cache",
             "stopAtEntry": false,
-            // Enable launching a web browser when ASP.NET Core starts. For more information: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
             "serverReadyAction": {
                 "action": "openExternally",
                 "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
@@ -21,18 +20,16 @@
             "sourceFileMap": {
                 "/Views": "${workspaceFolder}/Views"
             }
-        },        
+        },
         {
             "name": ".NET Core Launch (Gateway)",
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/OcelotGatewayDemo.Api.Gateway/bin/Debug/net7.0/OcelotGatewayDemo.Api.Gateway.dll",
+            "program": "${workspaceFolder}/src/OcelotGatewayDemo.Api.Gateway/bin/Debug/net7.0/OcelotGatewayDemo.Api.Gateway.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/OcelotGatewayDemo.Api.Gateway",
+            "cwd": "${workspaceFolder}/src/OcelotGatewayDemo.Api.Gateway",
             "stopAtEntry": false,
-            // Enable launching a web browser when ASP.NET Core starts. For more information: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
             "serverReadyAction": {
                 "action": "openExternally",
                 "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
@@ -48,6 +45,15 @@
             "name": ".NET Core Attach",
             "type": "coreclr",
             "request": "attach"
+        },
+        {
+            "name": "Docker .NET Core Launch",
+            "type": "docker",
+            "request": "launch",
+            "preLaunchTask": "docker-run: debug",
+            "netCore": {
+                "appProject": "${workspaceFolder}/src/OcelotGatewayDemo.Api.Cache/OcelotGatewayDemo.Api.Cache.csproj"
+            }
         }
     ]
 }
